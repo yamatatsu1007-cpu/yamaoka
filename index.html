@@ -87,7 +87,8 @@ color: #333;
 content: ‘’;
 position: absolute;
 inset: 0;
-background: linear-gradient(to right, transparent 60%, #ffffff);
+background: linear-gradient(to right, transparent 40%, rgba(255,255,255,0.7) 70%, #ffffff 100%);
+z-index: 1;
 }
 
 .cover-content {
@@ -210,6 +211,7 @@ font-size: clamp(32px, 4vw, 56px);
 font-weight: 700;
 line-height: 1.2;
 margin-bottom: 48px;
+color: #c9a84c;
 }
 
 /* ========= PAGE 2: ORIGIN ========= */
@@ -670,36 +672,48 @@ body { background: white; color: black; }
   <h2 class="section-title">来歴</h2>
   <div class="origin-grid">
     <div class="origin-text">
+      <p style="font-size:11px; letter-spacing:0.3em; color:#c9a84c; text-transform:uppercase; margin-bottom:8px;">幼少期</p>
       <p>祖父は俳優・<strong>山岡徹也</strong>、叔父は16連射の<strong>高橋名人</strong>。矜持と勝負師の血を継ぐ。幼少期を南米アルゼンチン・ベネズエラで過ごし、<strong>スペイン語</strong>を体得。</p>
       <p>アルゼンチンでホームステイ先を2度追い出され、<strong>ホームレス中学生</strong>になった。それでも諦めなかった。クラスメイトの家を一軒一軒尋ね歩き、なんとか生きのびる。</p>
-      <p>芸能事務所に入ると「お前みたいな役者は五万といるから、芸人でもやって名前を売れ」と言われ、お笑いコンビを結成。週4回の地下ライブで2年間スベり続ける。それでも意地を見せ、<strong>M-1グランプリ2回戦</strong>進出。</p>
-      <p>映像で戦うには演技力が必要だと一念発起し、小劇場に飛び込み<strong>15年</strong>の間演劇を学ぶ。</p>
-      <p>そんな最中、毎週日曜日の朝、カフェで演劇を行う朝劇下北沢のメンバーとなり、週1〜2回のお芝居を4年間継続。360度方向、近距離に観客がいる嘘の通じない環境で通算<strong>260ステージ</strong>を経験。映像演技に通ずるものを会得していく。</p>
-      <p>東日本大震災の際には、自ら役者によるチャリティー団体<strong>『池袋チャリンコ倶楽部』</strong>を発足し、4年間にわたり、イベントや舞台を開催、収益を被災地支援へ充てる。</p>
-      <p>様々な演出家の元を渡り歩き、時には演出家を捕まえて、「その技法を修得するまで教え続けて下さい」と懇願した。</p>
-      <p>武者修行のような期間を経て、再び映像へ！年間100本のオーディションを自らに課し、3年で<strong>300本</strong>。中国・インド・ブラジル、海外監督との仕事が続く。</p>
-      <p>日中合作映画「カップケーキ」主演に選ばれ、ロサンゼルス・AFMA映画祭にて<strong>最優秀主演男優賞</strong>受賞。1000人規模のオーディションが行われた園子温監督映画「エッシャー通りの赤いポスト」で<strong>主役を射止める。</strong>ニコラス・ケイジ主演の<strong>ハリウッド映画</strong>「プリズナーズ・オブ・ゴーストランド」への出演も果たす。</p>
-      <p>以降、石井裕也・中田秀夫・山口雅俊ら大物監督から選ばれ、若手では松本優作監督（Netflix「This is I」）、東京藝術大学の森美春監督、新進気鋭の矢座猛之進監督作品にも名を連ねる。</p>
-      <p>そして、次の展開へ舵を切る。</p>
-    </div>
-    <div class="origin-facts">
-      <div class="fact-item">
-        <div class="fact-number">300</div>
-        <div class="fact-label">本のオーディション（フリーで3年間）</div>
-      </div>
-      <div class="fact-item">
-        <div class="fact-number">15</div>
-        <div class="fact-label">年の演劇修行</div>
-      </div>
-      <div class="fact-item">
-        <div class="fact-number">LA</div>
-        <div class="fact-label">最優秀主演男優賞受賞</div>
-      </div>
-      <div class="fact-item">
-        <div class="fact-number">M-1</div>
-        <div class="fact-label">グランプリ2回戦進出</div>
-      </div>
-    </div>
+
+```
+  <p style="font-size:11px; letter-spacing:0.3em; color:#c9a84c; text-transform:uppercase; margin-bottom:8px; margin-top:32px;">芸人期</p>
+  <p>芸能事務所に入ると「お前みたいな役者は五万といるから、芸人でもやって名前を売れ」と言われ、お笑いコンビを結成。週4回の地下ライブで2年間スベり続ける。それでも意地を見せ、<strong>M-1グランプリ2回戦</strong>進出。</p>
+
+  <p style="font-size:11px; letter-spacing:0.3em; color:#c9a84c; text-transform:uppercase; margin-bottom:8px; margin-top:32px;">演劇期</p>
+  <p>映像で戦うには演技力が必要だと一念発起し、小劇場に飛び込み<strong>15年間</strong>演劇を学ぶ。</p>
+  <p>様々な演出家の元を渡り歩き、時には演出家を捕まえて、「その技法を修得するまで教え続けて下さい」と懇願した。</p>
+  <p>そんな中、毎週日曜日の朝、カフェで演劇を行う朝劇下北沢のメンバーとなり、週1〜2回のお芝居を4年間継続。360度方向、近距離に観客がいる嘘の通じない環境で通算<strong>260ステージ</strong>を経験。映像演技に通ずるものを会得していく。</p>
+  <p>東日本大震災の際には、自ら役者によるチャリティー団体<strong>『池袋チャリンコ倶楽部』</strong>を発足し、4年間にわたり、イベントや舞台を開催、収益を被災地支援へ充てる。</p>
+
+  <p style="font-size:11px; letter-spacing:0.3em; color:#c9a84c; text-transform:uppercase; margin-bottom:8px; margin-top:32px;">映像期</p>
+  <p>武者修行のような期間を経て、再び映像へ！年間100本のオーディションを自らに課し、3年で<strong>300本</strong>。中国・インド・ブラジル、海外監督との仕事が続く。</p>
+  <p>日中合作映画「カップケーキ」主演に選ばれ、ロサンゼルス・AFMA映画祭にて<strong>最優秀主演男優賞</strong>受賞。1000人規模のオーディションが行われた園子温監督映画「エッシャー通りの赤いポスト」で<strong>主役を射止める。</strong>ニコラス・ケイジ主演の<strong>ハリウッド映画</strong>「プリズナーズ・オブ・ゴーストランド」への出演も果たす。</p>
+
+  <p style="font-size:11px; letter-spacing:0.3em; color:#c9a84c; text-transform:uppercase; margin-bottom:8px; margin-top:32px;">事務所期</p>
+  <p>事務所に所属すると、石井裕也・中田秀夫・山口雅俊ら大物監督から選ばれ、若手では松本優作監督（Netflix「This is I」）、東京藝術大学の森美春監督、新進気鋭の矢座猛之進監督作品にも名を連ねる。</p>
+  <p>そして、次の展開へ舵を切る。</p>
+</div>
+<div class="origin-facts">
+  <div class="fact-item">
+    <div class="fact-number">300</div>
+    <div class="fact-label">本のオーディション（フリーで3年間）</div>
+  </div>
+  <div class="fact-item">
+    <div class="fact-number">15</div>
+    <div class="fact-label">年の演劇修行</div>
+  </div>
+  <div class="fact-item">
+    <div class="fact-number">LA</div>
+    <div class="fact-label">最優秀主演男優賞受賞</div>
+  </div>
+  <div class="fact-item">
+    <div class="fact-number">M-1</div>
+    <div class="fact-label">グランプリ2回戦進出</div>
+  </div>
+</div>
+```
+
   </div>
 </div>
 
@@ -720,20 +734,20 @@ body { background: white; color: black; }
       <div class="film-title">プリズナーズ・オブ・ゴーストランド</div>
       <div class="film-director">園子温監督（ハリウッド映画）</div>
     </div>
-    <div class="film-item highlight">
+    <div class="film-item">
       <div class="film-year">2026</div>
       <div class="film-title">This is I</div>
       <div class="film-director">松本優作監督（Netflix）</div>
     </div>
-    <div class="film-item">
+    <div class="film-item highlight">
       <div class="film-year">2025</div>
       <div class="film-title">事故物件ゾク恐い間取り</div>
       <div class="film-director">中田秀夫監督</div>
     </div>
-    <div class="film-item">
+    <div class="film-item highlight">
       <div class="film-year">2025</div>
-      <div class="film-title">山田くんとLv999の恋をする</div>
-      <div class="film-director">安川有果監督</div>
+      <div class="film-title">小さい頃は、神様がいて</div>
+      <div class="film-director">酒井麻衣監督</div>
     </div>
     <div class="film-item">
       <div class="film-year">2024</div>
@@ -747,9 +761,9 @@ body { background: white; color: black; }
       <div class="film-director">有田あん監督</div>
     </div>
     <div class="film-item">
-      <div class="film-year">2023</div>
-      <div class="film-title">大名倒産</div>
-      <div class="film-director">前田哲監督</div>
+      <div class="film-year">2022</div>
+      <div class="film-title">この日々が凪いだら</div>
+      <div class="film-director">常間地裕監督</div>
     </div>
     <div class="film-item">
       <div class="film-year">2023</div>
